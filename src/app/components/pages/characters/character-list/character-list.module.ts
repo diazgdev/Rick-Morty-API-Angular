@@ -9,7 +9,7 @@ import { CharacterListRoutingModule } from './character-list-routing.module';
   imports: [
     CommonModule,
     CharacterListRoutingModule,
-    RouterModule
+    // RouterModule
   ]
 })
 export class CharacterListModule { }

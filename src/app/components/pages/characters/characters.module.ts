@@ -8,7 +8,7 @@ const myComponents = [CharacterDetailsComponent, CharacterListComponent];
 
 @NgModule({
   declarations: [...myComponents],
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   exports: [...myComponents]
 })
 export class CharactersModule { }
