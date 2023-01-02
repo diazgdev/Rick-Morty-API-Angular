@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Character } from '@app/shared/interface/character.interface';
 import { CharacterService } from '@app/shared/services/character.service';
 
@@ -29,15 +29,21 @@ export class CharacterListComponent implements OnInit {
 
   constructor(
     private characterSvc: CharacterService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
     ) { }
 
   ngOnInit(): void {
+    //this.getCharactersByQuery();
     this.getDataFromService();
   }
 
-  private getCharactersByQuery(): void {
-
+  private getCharactersByQuery() {
+    // TODO: Fix this
+    // this.route.queryParams.pipe(take(1)).subscribe((params: ParamMap) => {
+    //   this.query = params['query'];
+    //   this.getDataFromService();
+    //});
   }
 
   private getDataFromService(): void {
